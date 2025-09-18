@@ -33,8 +33,7 @@
       align-items: center;
       text-align: center;
       padding: 2rem;
-      background: linear-gradient(to right, #3498db, #2ecc71);
-      color: white;
+      background: linear-gradient(to right, #797979ff, #2ecc71);
     }
 
     section.hero h1 {
@@ -79,13 +78,13 @@
   </header>
 
   <section class="hero">
-    <h1>Welcome to Our Website</h1>
-    <p>We provide awesome solutions to help your business grow. Join us today and start your journey to success!</p>
-    <button class="btn">Get Started</button>
+    <h1>Welcome to Coffee Way!</h1>
+    <p>We provide the best coffee in town for your kayod needs!</p>
+    <button class="btn">Go to Shop</button>
   </section>
 
   <footer>
-    <p>&copy; 2025 My Brand. All rights reserved.</p>
+    <p>&copy; 2025 Coffee Way. All rights reserved.</p>
   </footer>
 
 </body>
