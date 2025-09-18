@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Landing Page</title>
+  <title>COFFEE WAY</title>
   <style>
     * {
       margin: 0;
@@ -62,6 +62,7 @@
     .btn:hover {
       background: #c0392b;
     }
+    
 
     footer {
       background: #2c3e50;
@@ -74,7 +75,7 @@
 <body>
 
   <header>
-    <h2>My Brand</h2>
+    <h2>COFFEE WAY</h2>
   </header>
 
   <section class="hero">
