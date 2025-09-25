@@ -102,7 +102,7 @@
     <div class="nav-buttons">
       <a href="/Moodboard" class="btn1 btn-nav">Moodboard</a>
       <a href="/roadmap" class="btn1 btn-nav">RoadMap</a>
-      <a href="/landing" class="btn-nav">Home</a>
+      <a href="/" class="btn-nav">Home</a>
       <a href="/login" class="btn-nav">Login</a>
       <a href="/signup" class="btn-nav">Sign Up</a>
     </div>
