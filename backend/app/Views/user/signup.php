@@ -148,7 +148,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </form>
 
       <a href="/login" class="extra-link">Login</a>
-        <a href="/landing" class="extra-link">Back to Home</a>
+        <a href="/" class="extra-link">Back to Home</a>
     </div>
   </section>
 
