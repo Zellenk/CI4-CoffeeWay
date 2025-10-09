@@ -143,7 +143,7 @@
 
         <div class="timeline-item">
           <h3>Phase 3: Design & Mockups</h3>
-          <p>Creating consistent visuals, logos, and layout mockups for the Coffee Way website and brand identity.</p>
+          <p>Creating consistent visuals, logos, and layout mockups for the Coffee Way website, shop and brand identity.</p>
         </div>
 
         <div class="timeline-item">
