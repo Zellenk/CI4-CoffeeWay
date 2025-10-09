@@ -197,7 +197,7 @@
 
           <div class="timeline-item">
             <h3>Phase 2: Selecting Audience</h3>
-            <p>Identifying target customers and understanding their preferences for a tailored coffee experience.</p>
+            <p>Identifying target customers and understanding their preferences for a great coffee experience.</p>
           </div>
 
         </div>
