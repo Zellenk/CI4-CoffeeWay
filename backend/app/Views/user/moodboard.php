@@ -9,13 +9,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moodboard - Coffee Way</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Bitter', serif;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     body {
@@ -30,6 +34,10 @@
       background-blend-mode: lighten;
     }
 
+    header .nav-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
 
     section.moodboard {
       flex: 1;
@@ -44,9 +52,9 @@
       text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
     }
 
-    h3 {
+    h2 {
       margin: 1.5rem 0 1rem;
-      color: #3b2f2f;
+      color: #124625;
     }
 
     .photo-grid {
@@ -69,13 +77,11 @@
       transform: scale(1.05);
     }
 
-    /* Updated coffee-inspired color palette */
     .colors {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
       margin-bottom: 2rem;
-      justify-content: center;
     }
 
     .color-group {
@@ -95,12 +101,11 @@
     .color-label {
       font-size: 0.9rem;
       text-align: center;
-      color: #3b2f2f;
     }
+
 
     .typography {
       margin-bottom: 2rem;
-      color: #3b2f2f;
     }
 
     .heading-sample {
@@ -118,7 +123,6 @@
 
     .buttons {
       margin-bottom: 2rem;
-      color: #3b2f2f;
     }
 
     .btn-row {
@@ -136,36 +140,37 @@
     }
 
     .primary {
-      background: #cba57c;
-      color: #fff;
-      border: 1px solid #b08b60;
+      background: #ffffff;
+      color: black;
+      border: 1px solid #ccc;
     }
 
     .primary:hover {
-      background: #8b5e3c;
+      background: #124625;
+      color: white;
     }
 
     .secondary {
-      background: #3b2f2f;
-      color: #fff;
+      background: #2c3e50;
+      color: white;
     }
 
     .secondary:hover {
-      background: #5a3c2e;
+      background: #124625;
     }
 
     .accent {
-      background: #d8b89f;
-      color: #3b2f2f;
+      background: #2ecc71;
+      color: white;
     }
 
     .accent:hover {
-      background: #b69175;
+      background: #124625;
     }
 
     .disabled {
-      background: #e0d6d0;
-      color: #8c8c8c;
+      background: #ddd;
+      color: #999;
       cursor: not-allowed;
     }
 
@@ -175,6 +180,31 @@
       text-align: center;
       padding: 1rem;
       margin-top: auto;
+    }
+
+    .btn-nav {
+      background: #fff;
+      color: black;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-nav:hover {
+      background: #124625;
+      color: white;
+    }
+
+    .btn1 {
+      background: #2c3e50;
+      color: white;
+    }
+
+    .btn1:hover {
+      background: #124625;
     }
   </style>
 </head>
@@ -204,8 +234,8 @@
         <div class="color-label">Latte Beige<br>#cba57c</div>
       </div>
       <div class="color-group">
-        <div class="color-swatch" style="background:#f4ede3;"></div>
-        <div class="color-label">Cream White<br>#f4ede3</div>
+        <div class="color-swatch" style="background:#ffffff; border:1px solid #ccc;"></div>
+        <div class="color-label">white<br>#ffffff</div>
       </div>
       <div class="color-group">
         <div class="color-swatch" style="background:#8b5e3c;"></div>
