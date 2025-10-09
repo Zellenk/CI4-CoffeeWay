@@ -3,22 +3,23 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moodboard - Coffee Way</title>
   <style>
-    * { 
-        margin: 0; 
-        padding: 0; 
-        box-sizing: border-box; 
-        font-family: Arial, sans-serif; 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
-    body { 
-        display: flex; 
-        flex-direction: column; 
-        min-height: 100vh; 
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
@@ -30,9 +31,9 @@
       align-items: center;
     }
 
-    header .nav-buttons { 
-        display: flex; 
-        gap: 0.5rem; 
+    header .nav-buttons {
+      display: flex;
+      gap: 0.5rem;
     }
 
     section.moodboard {
@@ -48,9 +49,9 @@
       color: #2c3e50;
     }
 
-    h2 { 
-        margin: 1.5rem 0 1rem; 
-        color: #124625; 
+    h2 {
+      margin: 1.5rem 0 1rem;
+      color: #124625;
     }
 
     .photo-grid {
@@ -65,7 +66,7 @@
       height: 200px;
       object-fit: cover;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s;
     }
 
@@ -73,23 +74,35 @@
       transform: scale(1.05);
     }
 
-    .colors { display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
-    .color-group { display: flex; flex-direction: column; align-items: center; }
+    .colors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .color-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .color-swatch {
-      width: 120px; height: 60px;
+      width: 120px;
+      height: 60px;
       border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       margin-bottom: 0.5rem;
     }
 
-    .color-label { 
-        font-size: 0.9rem; 
-        text-align: center; 
+    .color-label {
+      font-size: 0.9rem;
+      text-align: center;
     }
 
 
-    .typography { 
-        margin-bottom: 2rem; 
+    .typography {
+      margin-bottom: 2rem;
     }
 
     .heading-sample {
@@ -98,20 +111,21 @@
       color: #2c3e50;
       margin-bottom: 0.5rem;
     }
+
     .body-sample {
       font-size: 1rem;
       color: #333;
       max-width: 600px;
     }
 
-    .buttons { 
-        margin-bottom: 2rem;
+    .buttons {
+      margin-bottom: 2rem;
     }
 
-    .btn-row { 
-        display: flex; 
-        gap: 1rem; 
-        margin-bottom: 1rem; 
+    .btn-row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
     }
 
     .btn-sample {
@@ -122,39 +136,40 @@
       font-size: 1rem;
       font-family: Arial, sans-serif;
     }
-    .primary { 
-        background: #ffffff; 
-        color: black; 
-        border: 1px solid #ccc; 
+
+    .primary {
+      background: #ffffff;
+      color: black;
+      border: 1px solid #ccc;
     }
 
-    .primary:hover { 
-        background: #124625; 
-        color: white; 
+    .primary:hover {
+      background: #124625;
+      color: white;
     }
 
-    .secondary { 
-        background: #2c3e50; 
-        color: white; 
+    .secondary {
+      background: #2c3e50;
+      color: white;
     }
 
-    .secondary:hover { 
-        background: #124625; 
+    .secondary:hover {
+      background: #124625;
     }
 
-    .accent { 
-        background: #2ecc71; 
-        color: white; 
+    .accent {
+      background: #2ecc71;
+      color: white;
     }
 
-    .accent:hover { 
-        background: #124625; 
+    .accent:hover {
+      background: #124625;
     }
 
-    .disabled { 
-        background: #ddd; 
-        color: #999; 
-        cursor: not-allowed; 
+    .disabled {
+      background: #ddd;
+      color: #999;
+      cursor: not-allowed;
     }
 
     footer {
@@ -174,11 +189,23 @@
       cursor: pointer;
       text-decoration: none;
     }
-    .btn-nav:hover { background: #124625; color: white; }
-    .btn1 { background: #2c3e50; color: white; }
-    .btn1:hover { background: #124625; }
+
+    .btn-nav:hover {
+      background: #124625;
+      color: white;
+    }
+
+    .btn1 {
+      background: #2c3e50;
+      color: white;
+    }
+
+    .btn1:hover {
+      background: #124625;
+    }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -214,7 +241,7 @@
       </div>
       <div class="color-group">
         <div class="color-swatch" style="background:#ffffff; border:1px solid #ccc;"></div>
-        <div class="color-label">White<br>#ffffff</div>
+        <div class="color-label">white<br>#ffffff</div>
       </div>
       <div class="color-group">
         <div class="color-swatch" style="background:#124625;"></div>
@@ -244,4 +271,5 @@
   </footer>
 
 </body>
+
 </html>
