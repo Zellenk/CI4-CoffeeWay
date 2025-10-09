@@ -223,7 +223,7 @@
       <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0" alt="Coffee shop">
     </div>
 
-    <h3>Color System</h3>
+    <h3>Color System </h3>
     <div class="colors">
       <div class="color-group">
         <div class="color-swatch" style="background:#3b2f2f;"></div>
