@@ -115,14 +115,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
 
-  <header>
-    <h2>COFFEE WAY</h2>
-  </header>
+  <?= view('components/header') ?>
 
   <section class="form-section">
     <div class="form-container">
       <h2>Login</h2>
-      <form method="post" action="login.php">
+      <form method="post" action="/login">
         <div class="form-group">
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required>
@@ -141,9 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Coffee Way. All rights reserved.</p>
-  </footer>
+  <?= view('components/footer') ?>
 
 </body>
 

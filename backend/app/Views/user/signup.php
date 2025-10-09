@@ -1,5 +1,4 @@
 <?php
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = $_POST["name"] ?? "";
   $email = $_POST["email"] ?? "";
@@ -121,42 +120,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <h2>COFFEE WAY</h2>
   </header>
 
+<body>
+  <?= view('components/header') ?>
   <section class="form-section">
     <div class="form-container">
       <h2>Sign Up</h2>
       <form method="post" action="signup.php">
-        <div class="form-group">
-          <label for="name">Full Name:</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-
-        <div class="form-group">
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required>
-        </div>
-
-        <div class="form-group">
-          <label for="confirm-password">Confirm Password:</label>
-          <input type="password" id="confirm-password" name="confirm-password" required>
-        </div>
-
-        <button type="submit" class="btn">Sign Up</button>
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="confirm-password" placeholder="Confirm Password" required>
+        <button type="submit">Sign Up</button>
       </form>
 
       <a href="/login" class="extra-link">Login</a>
       <a href="/" class="extra-link">back to Home</a>
     </div>
   </section>
-
-  <footer>
-    <p>&copy; 2025 Coffee Way. All rights reserved.</p>
-  </footer>
-
+  <?= view('components/footer') ?>
 </body>
 
 </html>
