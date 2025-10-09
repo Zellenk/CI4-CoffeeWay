@@ -3,13 +3,24 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roadmap - Coffee Way</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { display: flex; flex-direction: column; min-height: 100vh; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
     header {
       background: #2c3e50;
@@ -20,9 +31,9 @@
       align-items: center;
     }
 
-    header .nav-buttons { 
-        display: flex; 
-        gap: 0.5rem; 
+    header .nav-buttons {
+      display: flex;
+      gap: 0.5rem;
     }
 
     .btn-nav {
@@ -36,17 +47,19 @@
       text-decoration: none;
       transition: background 0.3s;
     }
-    .btn-nav:hover { 
-        background: #124625; 
-        color: white; 
-    }
-    .btn1 { 
-        background: #2c3e50; 
-        color: white; 
+
+    .btn-nav:hover {
+      background: #124625;
+      color: white;
     }
 
-    .btn1:hover { 
-        background: #124625; 
+    .btn1 {
+      background: #2c3e50;
+      color: white;
+    }
+
+    .btn1:hover {
+      background: #124625;
     }
 
     section.roadmap {
@@ -95,6 +108,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -122,7 +136,7 @@
         <p>Identifying target customers and understanding their preferences for a tailored coffee experience.</p>
       </div>
 
-      </div>
+    </div>
     </div>
   </section>
 
@@ -131,4 +145,5 @@
   </footer>
 
 </body>
+
 </html>
