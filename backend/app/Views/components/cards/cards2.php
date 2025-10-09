@@ -21,7 +21,7 @@
             <img src="https://images.ctfassets.net/jbquigiuzvay/OWJ69RtCdmnJNck95Lm9W/7f448fd561cb6eb372eb8904cbabb792/The_Top_Health_Benefits_of_Jasmine_Tea__Including_Antioxidant_Activity.webp" alt="Card 3 Image">
         </div>
         <h3>Jasmine Tea</h3>
-        <p>XXXXXXXXX.</p>
+        <p>XXXXXXXXX</p>
     </div>
 </div>
 

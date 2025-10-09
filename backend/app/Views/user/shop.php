@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COFFEE WAY</title>
+    <title>COFFEE WAY </title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap');
 

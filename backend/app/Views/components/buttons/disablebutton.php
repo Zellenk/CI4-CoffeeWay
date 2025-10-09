@@ -2,7 +2,6 @@
 // components/buttons/disabledbutton.php
 // expects: $label (text)
 ?>
-
 <a href="javascript:void(0)" class="disabled"><?= $label ?></a>
 
 <style>
@@ -16,5 +15,7 @@
         text-decoration: none;
         display: inline-block;
         cursor: not-allowed;
+
+
     }
 </style>

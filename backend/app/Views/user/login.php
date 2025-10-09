@@ -164,7 +164,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <button type="submit" class="btn">Login</button>
       </form>
 
+<<<<<<< HEAD
       <a href="/signup" class="extra-link">Don't have an account? Sign Up</a>
+=======
+      <a href="/signup" class="extra-link">Sign up</a>
+>>>>>>> d8c0fc2b48fa91f205e220fa8a2d339d7959eead
       <a href="/" class="extra-link">Back to Home</a>
     </div>
   </section>

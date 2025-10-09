@@ -171,8 +171,20 @@
 
 <body> <?= view('components/header') ?> <section class="moodboard">
     <h1>CoffeeWay Design Moodboard</h1>
+<<<<<<< HEAD
     <div class="photo-grid"> <img src="https://www.nescafe.com/ph/sites/default/files/2024-11/NESCAFE%20Sustainability%20UK%20Articles_Pillar%20Pages_Reference%20Images_Article%2024_Horizontal%20Image%20Reference_2188x1230_1.jpg" alt="Coffee cup"> <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03" alt="Coffee beans"> <img src="https://media.istockphoto.com/id/1400879519/photo/tasty-cups-of-coffee.jpg?s=612x612&w=0&k=20&c=tlr4PLHu-KbqYsDVpuGud-LVzMFZiKgfpWKEG9-bn8U=" alt="Latte art"> <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0" alt="Coffee shop"> </div>
     <h3>Color System</h3>
+=======
+
+    <div class="photo-grid">
+      <img src="https://www.nescafe.com/ph/sites/default/files/2024-11/NESCAFE%20Sustainability%20UK%20Articles_Pillar%20Pages_Reference%20Images_Article%2024_Horizontal%20Image%20Reference_2188x1230_1.jpg" alt="Coffee cup">
+      <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03" alt="Coffee beans">
+      <img src="https://media.istockphoto.com/id/1400879519/photo/tasty-cups-of-coffee.jpg?s=612x612&w=0&k=20&c=tlr4PLHu-KbqYsDVpuGud-LVzMFZiKgfpWKEG9-bn8U=" alt="Latte art">
+      <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0" alt="Coffee shop">
+    </div>
+
+    <h3>Color System </h3>
+>>>>>>> d8c0fc2b48fa91f205e220fa8a2d339d7959eead
     <div class="colors">
       <div class="color-group">
         <div class="color-swatch" style="background:#3b2f2f;"></div>
