@@ -2,6 +2,7 @@
 // components/buttons/accentbutton.php
 // expects: $label (text), $href (link)
 ?>
+
 <a href="<?= $href ?>" class="accent"><?= $label ?></a>
 
 <style>

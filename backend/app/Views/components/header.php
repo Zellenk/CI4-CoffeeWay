@@ -47,7 +47,6 @@ $nav = [
         <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="Coffee Way Logo">
         <h2>COFFEE WAY</h2>
     </div>
-
     <div class="nav-buttons">
         <?= view('components/buttons/primarybutton', ['label' => 'Get Started', 'href' => '/']) ?>
         <?= view('components/buttons/primarybutton', ['label' => 'Log In', 'href' => '/login']) ?>

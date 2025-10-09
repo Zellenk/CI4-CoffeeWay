@@ -5,7 +5,7 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgqpEjWZM4UwJMAWrJkeSuyhnrWYfHvMdIKQ&s" alt="Card 1 Image">
         </div>
         <h3>Cappuccino</h3>
-        <p>XXXXXXXXX.</p>
+        <p>XXXXXXXXX</p>
     </div>
 
     <div class="card">
