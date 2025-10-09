@@ -1,126 +1,67 @@
-<?php
-?>
+<?php ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COFFEE WAY</title>
   <style>
-    * { 
-      
-      margin: 0; 
-      padding: 0; 
-      box-sizing: 
-      border-box; 
-      font-family: Arial, sans-serif; 
-        }
+    @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap');
 
-    body { 
-      display: flex; 
-      flex-direction: 
-      column; min-height: 100vh; 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Bitter', serif;
     }
 
-    header {
-      background: #2c3e50; 
-      padding: 1rem 2rem; 
-      color: white;
-      display: flex; 
-      justify-content: space-between; 
-      align-items: center;
-
-    }
-
-    header .nav-buttons { 
-      display: flex; 
-      gap: 0.5rem; 
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-image: url("https://i.pinimg.com/1200x/1b/88/4f/1b884feae073713f3b52b6649f53eeeb.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-color: rgba(255, 255, 255, 0.6);
+      background-blend-mode: lighten;
     }
 
     section.hero {
-      flex: 1; display: flex; 
-      flex-direction: column; 
-      justify-content: center; 
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      text-align: center; 
-      padding: 2rem; 
-      background: linear-gradient(to right, #ffffffff, #2ecc71);
+      text-align: center;
+      padding: 3rem 2rem;
+      color: #3b2f2f;
     }
 
-    section.hero h1 { 
-      font-size: 3rem; 
-      margin-bottom: 1rem; 
+    section.hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #3b2f2f;
     }
 
-    section.hero p { 
-      font-size: 1.2rem; 
-      margin-bottom: 2rem; 
-      max-width: 600px; 
+    section.hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      color: #5a3c2e;
     }
-
-    .btn {
-      background: #fff; 
-      color: black; 
-      padding: 0.5rem 1rem; 
-      border: none; 
-      border-radius: 5px;
-      font-size: 1rem; 
-      cursor: pointer; 
-      transition: background 0.3s; 
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .btn1 {
-      background: #2c3e50; 
-      color: white; 
-      padding: 0.5rem 1rem; 
-      border: none; 
-      border-radius: 5px;
-      font-size: 1rem; 
-      cursor: pointer; 
-      transition: background 0.3s; 
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .btn:hover { 
-      background: #124625ff; 
-      color: white; 
-    }
-
-    footer { 
-      background: #2c3e50; 
-      color: white; 
-      text-align: center; 
-      padding: 1rem; 
-    }
-
   </style>
 </head>
+
 <body>
 
-  <header>
-    <h2>COFFEE WAY</h2>
-    <div class="nav-buttons">
-      <a href="/moodboard" class="btn1">Moodboard</a>
-      <a href="/roadmap" class="btn1">RoadMap</a>
-      <a href="/" class="btn">Home</a>
-      <a href="/login" class="btn">Login</a>
-      <a href="/signup" class="btn">Sign Up</a>
-
-    </div>
-  </header>
-
-  <section class="hero">
-    <h1>Welcome to Coffee Way!</h1>
-    <p>We provide the best coffee in town for your kayod needs!</p>
-    <a href="/shop" class="btn">Go to Shop</a>
+  <?= view('components/header') ?>
+  <?= view('components/cta') ?>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Coffee Way. All rights reserved.</p>
-  </footer>
+  <?= view('components/footer') ?>
 
 </body>
+
 </html>
