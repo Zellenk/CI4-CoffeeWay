@@ -9,26 +9,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roadmap - Coffee Way</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Bitter', serif;
+      font-family: Arial, sans-serif;
     }
 
     body {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      background-image: url("https://cdn2.lnk.bi/themes/66ed619db4fcd.svgz");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      background-color: rgba(255, 255, 255, 0.6);
-      background-blend-mode: lighten;
-      overflow-x: hidden;
+    }
+
+    header {
+      background: #2c3e50;
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .nav-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .btn-nav {
+      background: #fff;
+      color: black;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn-nav:hover {
+      background: #124625;
+      color: white;
+    }
+
+    .btn1 {
+      background: #2c3e50;
+      color: white;
+    }
+
+    .btn1:hover {
+      background: #124625;
     }
 
     section.roadmap {
@@ -129,7 +160,8 @@
   <section class="roadmap">
     <h1>CoffeeWay Roadmap</h1>
 
-    <div class="roadmap-content">
+    <<<<<<< HEAD
+      <div class="roadmap-content">
       <div class="timeline">
         <div class="timeline-item">
           <h3>Phase 1: Idea & Research</h3>
@@ -155,8 +187,21 @@
           <h3>Phase 5: Testing & Launch</h3>
           <p>Debugging, optimizing performance, and preparing Coffee Way for official release.</p>
         </div>
+        =======
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Phase 1: Idea & Research</h3>
+            <p>Developing the Coffee Way concept, doing market research, and obtaining design and branding inspiration.</p>
+            >>>>>>> 4e1ea82c94624004d1cb25f60153db33e0e1bc47
+          </div>
+
+          <div class="timeline-item">
+            <h3>Phase 2: Selecting Audience</h3>
+            <p>Identifying target customers and understanding their preferences for a tailored coffee experience.</p>
+          </div>
+
+        </div>
       </div>
-    </div>
   </section>
 
   <?= view('components/footer') ?>

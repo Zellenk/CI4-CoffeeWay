@@ -59,7 +59,6 @@
   <?= view('components/header') ?>
   <?= view('components/cta') ?>
   </section>
-
   <?= view('components/footer') ?>
 
 </body>

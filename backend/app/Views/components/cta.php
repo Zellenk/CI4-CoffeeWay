@@ -9,7 +9,6 @@
         font-style: Bold;
     }
 </style>
-
 <section class="hero">
     <h1>Welcome to Coffee Way!</h1>
     <p>We provide the best coffee in town for your kayod needs!</p>

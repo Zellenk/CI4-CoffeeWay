@@ -9,7 +9,6 @@
 
 <footer>
     <p>&copy; 2025 Coffee Way. All rights reserved.</p>
-
     <div class="nav-buttons">
         <?= view('components/buttons/secondarybutton', ['label' => 'Moodboard', 'href' => '/moodboard']) ?>
         <?= view('components/buttons/secondarybutton', ['label' => 'RoadMap', 'href' => '/roadmap']) ?>

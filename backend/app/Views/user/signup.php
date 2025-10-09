@@ -3,11 +3,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = $_POST["name"] ?? "";
   $email = $_POST["email"] ?? "";
   $password = $_POST["password"] ?? "";
-  $confirm = $_POST["confirm-password"] ?? "";
-  if ($password !== $confirm) {
+  $confirmPassword = $_POST["confirm-password"] ?? "";
+
+  if ($password !== $confirmPassword) {
     echo "<script>alert('Passwords do not match!');</script>";
   } else {
-    echo "<script>alert('Account created successfully!'); window.location='/login';</script>";
+    // database insertion logic here uwu
+    echo "<script>alert('Account created successfully! You can now log in.'); window.location='login.php';</script>";
   }
 }
 ?>
@@ -19,97 +21,125 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up - Coffee Way</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap');
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Bitter', serif;
+      font-family: Arial, sans-serif;
     }
 
     body {
-      background: linear-gradient(to right, #f4ede3, #d8b89f);
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #2c3e50;
+      padding: 1rem 2rem;
+      color: white;
+      text-align: center;
     }
 
     .form-section {
       flex: 1;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      background: linear-gradient(to right, #797979ff, #2ecc71);
       padding: 2rem;
     }
 
     .form-container {
-      background: #f4ede3;
-      border: 2px solid #cba57c;
-      border-radius: 10px;
+      background: white;
       padding: 2rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      width: 100%;
       max-width: 400px;
       text-align: center;
     }
 
-    input {
+    .form-container h2 {
+      margin-bottom: 1.5rem;
+      color: #2c3e50;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    .form-group input {
       width: 100%;
       padding: 0.7rem;
-      border: 1px solid #cba57c;
+      border: 1px solid #ccc;
       border-radius: 5px;
-      margin-bottom: 1rem;
     }
 
-    button {
-      background: #cba57c;
-      color: #fff;
+    .btn {
+      background: #2c3e50;
+      color: white;
+      padding: 0.7rem 1.5rem;
       border: none;
       border-radius: 5px;
-      padding: 0.7rem 1.2rem;
+      font-size: 1rem;
       cursor: pointer;
-    }
-
-    button:hover {
-      background: #8b5e3c;
-    }
-
-    a {
-      display: block;
       margin-top: 1rem;
-      color: #3b2f2f;
-      text-decoration: none;
+      transition: background 0.3s;
     }
 
-
-    a:hover {
-      color: #8b5e3c;
+    .btn:hover {
+      background: #bb0000ff;
     }
 
-    .form-container h2 {
-      margin-bottom: 1rem;
-      color: #3b2f2f;
+    .extra-link {
+      margin-top: 1rem;
+      display: block;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
     }
   </style>
 </head>
 
 <body>
-  <?= view('components/header') ?>
-  <section class="form-section">
-    <div class="form-container">
-      <h2>Sign Up</h2>
-      <form method="post" action="signup.php">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="password" name="confirm-password" placeholder="Confirm Password" required>
-        <button type="submit">Sign Up</button>
-      </form>
-      <a href="/login">Login</a>
-      <a href="/">Back to Home</a>
-    </div>
-  </section>
-  <?= view('components/footer') ?>
-</body>
+
+  <header>
+    <h2>COFFEE WAY</h2>
+  </header>
+
+  <body>
+    <?= view('components/header') ?>
+    <section class="form-section">
+      <div class="form-container">
+        <h2>Sign Up</h2>
+        <form method="post" action="signup.php">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <input type="password" name="confirm-password" placeholder="Confirm Password" required>
+          <button type="submit">Sign Up</button>
+        </form>
+
+        <a href="/login" class="extra-link">Login</a>
+        <a href="/" class="extra-link">back to Home</a>
+      </div>
+    </section>
+    <?= view('components/footer') ?>
+  </body>
 
 </html>
+</p>
+</footer>
