@@ -9,14 +9,14 @@ class UsersSeeder extends Seeder
     public function run()
     {
         $now = date('Y-m-d H:i:s');
-        $password = password_hash('Password123!', PASSWORD_DEFAULT);
+        $password = password_hash('123', PASSWORD_DEFAULT);
 
         $dataYouWannaInsert = [
             [
-                'first_name'      => 'John',
-                'middle_name'     => 'D',
-                'last_name'       => 'Doe',
-                'email'           => 'john.doe@example.com',
+                'first_name'      => 'Ashley',
+                'middle_name'     => 'M',
+                'last_name'       => 'Solis',
+                'email'           => 'Ash@example.com',
                 'password_hash'   => $password,
                 'type'            => 'client',
                 'account_status'  => 1,
@@ -27,10 +27,10 @@ class UsersSeeder extends Seeder
                 'updated_at'      => $now,
             ],
             [
-                'first_name'      => 'Admin',
-                'middle_name'     => '',
-                'last_name'       => 'Coffee',
-                'email'           => 'admin@coffeeway.com',
+                'first_name'      => 'Coffee',
+                'middle_name'     => 'Na',
+                'last_name'       => 'Malupit',
+                'email'           => 'Coffee@coffeeway.com',
                 'password_hash'   => $password,
                 'type'            => 'admin',
                 'account_status'  => 1,
