@@ -147,7 +147,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
 
-<<<<<<< HEAD
   <?= view('components/header') ?>
 
   <section class="form-section">
@@ -187,32 +186,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 
 </html>
-=======
-  <header>
-    <h2>COFFEE WAY</h2>
-  </header>
-
-  <body>
-    <?= view('components/header') ?>
-    <section class="form-section">
-      <div class="form-container">
-        <h2>Sign Up</h2>
-        <form method="post" action="signup.php">
-          <input type="text" name="name" placeholder="Full Name" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <input type="password" name="password" placeholder="Password" required>
-          <input type="password" name="confirm-password" placeholder="Confirm Password" required>
-          <button type="submit">Sign Up</button>
-        </form>
-
-        <a href="/login" class="extra-link">Login</a>
-        <a href="/" class="extra-link">Back to Home</a>
-      </div>
-    </section>
-    <?= view('components/footer') ?>
-  </body>
-
-</html>
-</p>
-</footer>
->>>>>>> d8c0fc2b48fa91f205e220fa8a2d339d7959eead

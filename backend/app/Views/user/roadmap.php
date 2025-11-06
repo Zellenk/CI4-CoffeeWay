@@ -129,12 +129,7 @@
   <section class="roadmap">
     <h1>CoffeeWay Roadmap</h1>
 
-<<<<<<< HEAD
     <div class="roadmap-content">
-=======
-    <<<<<<< HEAD
-      <div class="roadmap-content">
->>>>>>> d8c0fc2b48fa91f205e220fa8a2d339d7959eead
       <div class="timeline">
         <div class="timeline-item">
           <h3>Phase 1: Idea & Research</h3>
@@ -148,11 +143,7 @@
 
         <div class="timeline-item">
           <h3>Phase 3: Design & Mockups</h3>
-<<<<<<< HEAD
           <p>Creating consistent visuals, logos, and layout mockups for the Coffee Way website and brand identity.</p>
-=======
-          <p>Creating consistent visuals, logos, and layout mockups for the Coffee Way website, shop and brand identity.</p>
->>>>>>> d8c0fc2b48fa91f205e220fa8a2d339d7959eead
         </div>
 
         <div class="timeline-item">
@@ -164,26 +155,8 @@
           <h3>Phase 5: Testing & Launch</h3>
           <p>Debugging, optimizing performance, and preparing Coffee Way for official release.</p>
         </div>
-<<<<<<< HEAD
       </div>
     </div>
-=======
-        =======
-        <div class="timeline">
-          <div class="timeline-item">
-            <h3>Phase 1: Idea & Research</h3>
-            <p>Developing the Coffee Way concept, doing market research, and obtaining design and branding inspiration.</p>
-            >>>>>>> 4e1ea82c94624004d1cb25f60153db33e0e1bc47
-          </div>
-
-          <div class="timeline-item">
-            <h3>Phase 2: Selecting Audience</h3>
-            <p>Identifying target customers and understanding their preferences for a great coffee experience.</p>
-          </div>
-
-        </div>
-      </div>
->>>>>>> d8c0fc2b48fa91f205e220fa8a2d339d7959eead
   </section>
 
   <?= view('components/footer') ?>
