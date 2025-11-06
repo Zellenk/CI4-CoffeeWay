@@ -152,10 +152,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <section class="form-section">
     <div class="form-container">
       <h2>SIGN UP</h2>
-      <form method="post" action="signup.php">
+      <?php if (session()->has('errors')): ?>
+        <div style="color: red; margin-bottom: 1rem;">
+          <ul>
+            <?php foreach (session('errors') as $error): ?>
+              <li><?= esc($error) ?></li>
+            <?php endforeach ?>
+          </ul>
+        </div>
+      <?php endif; ?>
+
+      <form action="/signup" method="POST">
+        <?= csrf_field() ?>
+
         <div class="form-group">
-          <label for="name">Full Name:</label>
-          <input type="text" id="name" name="name" required>
+          <label for="first_name">First Name:</label>
+          <input type="text" id="first_name" name="first_name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="middle_name">Middle Name (Optional):</label>
+          <input type="text" id="middle_name" name="middle_name">
+        </div>
+
+        <div class="form-group">
+          <label for="last_name">Last Name:</label>
+          <input type="text" id="last_name" name="last_name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="contact_no">Contact Number:</label>
+          <input type="text" id="contact_no" name="contact_no">
         </div>
 
         <div class="form-group">
@@ -169,12 +196,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="form-group">
-          <label for="confirm-password">Confirm Password:</label>
-          <input type="password" id="confirm-password" name="confirm-password" required>
+          <label for="confirm_password">Confirm Password:</label>
+          <input type="password" id="confirm_password" name="confirm_password" required>
         </div>
 
         <button type="submit" class="btn">Sign Up</button>
       </form>
+
 
       <a href="/login" class="extra-link">Already have an account? Login</a>
       <a href="/" class="extra-link">Back to Home</a>
