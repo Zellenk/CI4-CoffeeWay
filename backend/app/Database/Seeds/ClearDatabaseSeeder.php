@@ -16,5 +16,7 @@ class ClearDatabaseSeeder extends Seeder
         $db->disableForeignKeyChecks();
         $builder->truncate();
         $db->enableForeignKeyChecks();
+        // Add the table name inside example "User" Table
+        $tablesInOrder = ['User'];
     }
 }
