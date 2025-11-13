@@ -11,7 +11,7 @@
 </div>
 
 <style>
-    /* Container to center all cards */
+    /* Reuse your card styles for consistency */
     .cards-container {
         display: flex;
         justify-content: center;
@@ -32,7 +32,6 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* Hover effect on entire card */
     .card:hover {
         transform: scale(1.05);
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
@@ -54,7 +53,6 @@
         transition: transform 0.4s ease;
     }
 
-    /* Subtle zoom effect on image when hovered */
     .card:hover .card-image img {
         transform: scale(1.1);
     }

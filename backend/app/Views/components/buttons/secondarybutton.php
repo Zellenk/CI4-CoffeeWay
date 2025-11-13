@@ -4,6 +4,7 @@
 ?>
 
 <a href="<?= $href ?>" class="secondary"><span><?= $label ?></span></a>
+
 <style>
     .secondary {
         background-color: #3b2f2f;

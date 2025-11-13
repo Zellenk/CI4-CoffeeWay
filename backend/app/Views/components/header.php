@@ -1,9 +1,6 @@
 <?php
-$nav = [
-    ['label' => 'Home', 'href' => '/'],
-    ['label' => 'Sign Up', 'href' => '/signup'],
-    ['label' => 'Login', 'href' => '/login'],
-];
+$session = session();
+$user = $session->get('user');
 ?>
 
 <style>
@@ -39,6 +36,17 @@ $nav = [
     header .nav-buttons {
         display: flex;
         gap: 0.5rem;
+        align-items: center;
+    }
+
+    .welcome-text {
+        font-size: 18px;
+        color: wheat;
+        margin-right: 1rem;
+    }
+
+    form.logout-form {
+        display: inline;
     }
 </style>
 
@@ -47,9 +55,27 @@ $nav = [
         <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="Coffee Way Logo">
         <h2>COFFEE WAY</h2>
     </div>
+
     <div class="nav-buttons">
-        <?= view('components/buttons/primarybutton', ['label' => 'Get Started', 'href' => '/']) ?>
-        <?= view('components/buttons/primarybutton', ['label' => 'Log In', 'href' => '/login']) ?>
-        <?= view('components/buttons/primarybutton', ['label' => 'Sign up', 'href' => '/signup']) ?>
+        <?php if ($user): ?>
+            <span class="welcome-text">
+                Welcome, <?= esc($user['display_name']) ?>!
+            </span>
+
+            <!-- Logout Button -->
+            <form action="/logout" method="post" class="logout-form">
+                <?= csrf_field() ?>
+                <?= view('components/buttons/primarybutton', [
+                    'label' => 'Logout',
+                    'type' => 'submit',
+                ]) ?>
+            </form>
+
+
+        <?php else: ?>
+            <?= view('components/buttons/primarybutton', ['label' => 'Get Started', 'href' => '/']) ?>
+            <?= view('components/buttons/primarybutton', ['label' => 'Log In', 'href' => '/login']) ?>
+            <?= view('components/buttons/primarybutton', ['label' => 'Sign up', 'href' => '/signup']) ?>
+        <?php endif; ?>
     </div>
 </header>
