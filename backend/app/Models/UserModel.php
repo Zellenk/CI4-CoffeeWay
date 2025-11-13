@@ -7,14 +7,14 @@ use App\Entities\User;
 
 class UserModel extends Model
 {
-    protected $table            = 'users';
-    protected $primaryKey       = 'id';
-    protected $useAutoIncrement = true;
+    protected $table             = 'users';
+    protected $primaryKey        = 'id';
+    protected $useAutoIncrement  = true;
 
-    protected $returnType       = User::class;
+    protected $returnType        = User::class;
 
-    protected $useSoftDeletes   = true;
-    protected $protectFields    = true;
+    protected $useSoftDeletes    = true;
+    protected $protectFields     = true;
 
     protected $allowedFields = [
         'first_name',

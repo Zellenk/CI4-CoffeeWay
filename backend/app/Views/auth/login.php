@@ -1,16 +1,3 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $email = $_POST["email"] ?? "";
-  $password = $_POST["password"] ?? "";
-
-  // Placeholder authentication
-  if ($email === "hhh@gmail.com" && $password === "0000") {
-    echo "<script>alert('Login successful!'); window.location='landing.php';</script>";
-  } else {
-    echo "<script>alert('Invalid credentials!');</script>";
-  }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,15 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       background-size: cover;
       background-color: rgba(255, 255, 255, 0.7);
       background-blend-mode: lighten;
-    }
-
-    header {
-      background: #2c3e50;
-      padding: 1rem 2rem;
-      color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
     }
 
     .form-section {
@@ -79,16 +57,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       text-align: left;
     }
 
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-    }
-
     .form-group input {
       width: 100%;
       padding: 0.7rem;
       border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .error-message {
+      background: #ffdddd;
+      color: #b20000;
+      padding: 0.5rem;
+      margin-bottom: 0.6rem;
+      font-size: .85rem;
       border-radius: 5px;
     }
 
@@ -102,11 +83,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       cursor: pointer;
       margin-top: 1rem;
       transition: background 0.3s, transform 0.2s;
+      width: 100%;
     }
 
     .btn:hover {
       background: #bb0000ff;
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
 
     .extra-link {
@@ -121,25 +103,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     .extra-link:hover {
       color: #bb0000ff;
     }
-
-    footer {
-      background: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
   </style>
 </head>
 
@@ -150,18 +113,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <section class="form-section">
     <div class="form-container">
       <h2>LOG IN</h2>
-      <form method="post" action="/login">
+
+      <?php if (session()->getFlashdata('errors')) : ?>
+        <?php foreach (session()->getFlashdata('errors') as $error) : ?>
+          <div class="error-message"><?= esc($error) ?></div>
+        <?php endforeach; ?>
+      <?php endif; ?>
+
+      <form action="/login" method="POST">
         <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" name="email" placeholder="Email"
+            value="<?= esc(session()->getFlashdata('old')['email'] ?? '') ?>" required>
         </div>
 
         <div class="form-group">
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required>
+          <input type="password" name="password" placeholder="Password" required>
         </div>
 
-        <button type="submit" class="btn">Login</button>
+        <button type="submit" class="btn">Sign In</button>
       </form>
 
       <a href="/signup" class="extra-link">Don't have an account? Sign Up</a>

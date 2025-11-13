@@ -13,6 +13,7 @@
 
     <?= view('components/header') ?>
 
+
     <main class="mx-auto px-6 py-10 max-w-6xl">
         <div class="md:flex md:space-x-6">
             <?= view('components/aside/admin_manager', ['active' => 'dashboard']) ?>

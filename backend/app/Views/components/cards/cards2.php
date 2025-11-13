@@ -1,29 +1,19 @@
-<!-- cards.php -->
 <div class="cards-container">
-    <div class="card">
-        <div class="card-image">
-            <img src="https://www.thespruceeats.com/thmb/YEI_JAfLHd6fbfCYUukcW5E2TYg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SES-cafe-au-lait-recipe-1374920-hero-01-b1463e806a7947e7b8b17979ab70eab3.jpg" alt="Card 1 Image">
+    <?php foreach ($cards as $card): ?>
+        <div class="card">
+            <div class="card-image">
+                <img src="<?= esc($card['image']) ?>" alt="<?= esc($card['title']) ?>">
+            </div>
+            <h3><?= esc($card['title']) ?></h3>
+            <p><?= esc($card['desc']) ?></p>
         </div>
-        <h3>French Cafe au Lait</h3>
-        <p>XXXXXXXXX.</p>
-    </div>
-
-    <div class="card">
-        <div class="card-image">
-            <img src="https://myeverydaytable.com/wp-content/uploads/americano-1024x576.png" alt="Card 2 Image">
-        </div>
-        <h3>Americano</h3>
-        <p>XXXXXXXXX.</p>
-    </div>
-
-    <div class="card">
-        <div class="card-image">
-            <img src="https://images.ctfassets.net/jbquigiuzvay/OWJ69RtCdmnJNck95Lm9W/7f448fd561cb6eb372eb8904cbabb792/The_Top_Health_Benefits_of_Jasmine_Tea__Including_Antioxidant_Activity.webp" alt="Card 3 Image">
-        </div>
-        <h3>Jasmine Tea</h3>
-        <p>XXXXXXXXX</p>
-    </div>
+    <?php endforeach; ?>
 </div>
+
+<style>
+    /* Keep your original CSS here (no change needed) */
+</style>
+
 
 <style>
     /* Container to center all cards */

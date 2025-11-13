@@ -1,18 +1,3 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = $_POST["name"] ?? "";
-  $email = $_POST["email"] ?? "";
-  $password = $_POST["password"] ?? "";
-  $confirmPassword = $_POST["confirm-password"] ?? "";
-
-  if ($password !== $confirmPassword) {
-    echo "<script>alert('Passwords do not match!');</script>";
-  } else {
-    // Placeholder for database logic
-    echo "<script>alert('Account created successfully! You can now log in.'); window.location='login.php';</script>";
-  }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -124,6 +109,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       color: #bb0000ff;
     }
 
+    .error-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .error-message {
+      color: #a94442;
+      background-color: #f2dede;
+      border: 1px solid #ebccd1;
+      padding: 10px;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+      text-align: left;
+    }
+
     footer {
       background: #2c3e50;
       color: white;
@@ -147,20 +147,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
 
+  <!-- Assuming view('components/header') exists -->
   <?= view('components/header') ?>
 
   <section class="form-section">
     <div class="form-container">
       <h2>SIGN UP</h2>
-      <form method="post" action="signup.php">
+
+      <?php if (!empty($errors)): ?>
+        <div class="error-message">
+          <p>Please fix the following issues:</p>
+          <ul class="error-list">
+            <?php foreach ($errors as $error): ?>
+              <li><?= esc($error) ?></li>
+            <?php endforeach ?>
+          </ul>
+        </div>
+      <?php endif; ?>
+
+      <!-- The action points to the 'signup' method in Auth Controller -->
+      <form action="/signup" method="POST">
+        <!-- CI4 CSRF protection -->
+        <?= csrf_field() ?>
+
         <div class="form-group">
-          <label for="name">Full Name:</label>
-          <input type="text" id="name" name="name" required>
+          <label for="first_name">First Name:</label>
+          <!-- Use old() helper to repopulate on error -->
+          <input type="text" id="first_name" name="first_name" value="<?= old('first_name') ?>" required>
+        </div>
+
+        <div class="form-group">
+          <label for="middle_name">Middle Name (Optional):</label>
+          <input type="text" id="middle_name" name="middle_name" value="<?= old('middle_name') ?>">
+        </div>
+
+        <div class="form-group">
+          <label for="last_name">Last Name:</label>
+          <input type="text" id="last_name" name="last_name" value="<?= old('last_name') ?>" required>
+        </div>
+
+        <div class="form-group">
+          <label for="contact_no">Contact Number:</label>
+          <input type="text" id="contact_no" name="contact_no" value="<?= old('contact_no') ?>">
         </div>
 
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" value="<?= old('email') ?>" required>
         </div>
 
         <div class="form-group">
@@ -169,18 +202,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="form-group">
-          <label for="confirm-password">Confirm Password:</label>
-          <input type="password" id="confirm-password" name="confirm-password" required>
+          <!-- CRITICAL FIX: The name MUST be 'password_confirm' to match the Controller's validation rule -->
+          <label for="password_confirm">Confirm Password:</label>
+          <input type="password" id="password_confirm" name="password_confirm" required>
         </div>
 
         <button type="submit" class="btn">Sign Up</button>
       </form>
+
 
       <a href="/login" class="extra-link">Already have an account? Login</a>
       <a href="/" class="extra-link">Back to Home</a>
     </div>
   </section>
 
+  <!-- Assuming view('components/footer') exists -->
   <?= view('components/footer') ?>
 
 </body>
