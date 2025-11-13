@@ -147,7 +147,6 @@
 
 <body>
 
-  <!-- Assuming view('components/header') exists -->
   <?= view('components/header') ?>
 
   <section class="form-section">
@@ -165,14 +164,12 @@
         </div>
       <?php endif; ?>
 
-      <!-- The action points to the 'signup' method in Auth Controller -->
       <form action="/signup" method="POST">
         <!-- CI4 CSRF protection -->
         <?= csrf_field() ?>
 
         <div class="form-group">
           <label for="first_name">First Name:</label>
-          <!-- Use old() helper to repopulate on error -->
           <input type="text" id="first_name" name="first_name" value="<?= old('first_name') ?>" required>
         </div>
 
@@ -202,7 +199,6 @@
         </div>
 
         <div class="form-group">
-          <!-- CRITICAL FIX: The name MUST be 'password_confirm' to match the Controller's validation rule -->
           <label for="password_confirm">Confirm Password:</label>
           <input type="password" id="password_confirm" name="password_confirm" required>
         </div>
@@ -216,7 +212,6 @@
     </div>
   </section>
 
-  <!-- Assuming view('components/footer') exists -->
   <?= view('components/footer') ?>
 
 </body>
