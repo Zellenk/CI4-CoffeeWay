@@ -11,11 +11,6 @@
 </div>
 
 <style>
-    /* Keep your original CSS here (no change needed) */
-</style>
-
-
-<style>
     /* Container to center all cards */
     .cards-container {
         display: flex;

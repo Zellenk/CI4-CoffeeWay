@@ -4,86 +4,87 @@
             <div class="card-image">
                 <img src="<?= esc($card['image']) ?>" alt="<?= esc($card['title']) ?>">
             </div>
-            <h3><?= esc($card['title']) ?></h3>
-            <p><?= esc($card['desc']) ?></p>
+            <div class="card-content">
+                <h3><?= esc($card['title']) ?></h3>
+                <p><?= esc($card['desc']) ?></p>
+            </div>
         </div>
     <?php endforeach; ?>
 </div>
 
-<style>
-    /* Keep your original CSS here (no change needed) */
-</style>
 
 
 <style>
-    /* Container to center all cards */
+    /* ===== Card Container ===== */
     .cards-container {
         display: flex;
         justify-content: center;
-        align-items: center;
-        gap: 5rem;
-        /* more space between cards */
+        align-items: stretch;
         flex-wrap: wrap;
-        /* make responsive */
-        margin-top: 3rem;
+        gap: 2rem;
+        padding: 5rem 2rem;
+        max-width: 2000px;
+        margin: 0 auto;
     }
 
+    /* ===== Individual Card ===== */
     .card {
-        border: 1px solid #ccc;
-        border-radius: 12px;
-        padding: 2rem;
-        /* bigger padding */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        max-width: 350px;
-        /* slightly wider */
-        text-align: center;
         background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+        max-width: 3000px;
+        width: 100%;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+    }
+
+    /* ===== Card Image ===== */
     .card-image {
         width: 100%;
-        height: 250px;
-        /* bigger image */
-        margin-bottom: 1.5rem;
+        height: 220px;
         overflow: hidden;
-        border-radius: 8px;
     }
 
     .card-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        display: block;
+        transition: transform 0.4s ease;
     }
 
+    .card:hover .card-image img {
+        transform: scale(1.1);
+    }
+
+    /* ===== Text Content ===== */
     .card h3 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
         color: #2c3e50;
+        margin: 1.2rem 1rem 0.5rem;
     }
 
     .card p {
         font-size: 1rem;
-        color: #555;
+        color: #666;
+        padding: 0 1.2rem 1.5rem;
+        line-height: 1.6;
     }
 
-    .photo-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 1rem;
-        margin-bottom: 3rem;
-    }
+    /* ===== Responsive Design ===== */
+    @media (max-width: 768px) {
+        .cards-container {
+            padding: 3rem 1rem;
+            gap: 1.5rem;
+        }
 
-    .photo-grid img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s;
-    }
-
-    .photo-grid img:hover {
-        transform: scale(1.05);
+        .card {
+            max-width: 90%;
+        }
     }
 </style>

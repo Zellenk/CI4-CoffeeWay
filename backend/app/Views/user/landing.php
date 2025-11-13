@@ -21,7 +21,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      background-image: url("https://i.pinimg.com/1200x/1b/88/4f/1b884feae073713f3b52b6649f53eeeb.jpg");
+      background-image: url("https://i0.wp.com/1zpresso.coffee/wp-content/uploads/2025/06/coffee-52.png?ssl=1");
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
