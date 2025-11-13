@@ -1,29 +1,19 @@
-<!-- cards.php -->
 <div class="cards-container">
-    <div class="card">
-        <div class="card-image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgqpEjWZM4UwJMAWrJkeSuyhnrWYfHvMdIKQ&s" alt="Card 1 Image">
+    <?php foreach ($cards as $card): ?>
+        <div class="card">
+            <div class="card-image">
+                <img src="<?= esc($card['image']) ?>" alt="<?= esc($card['title']) ?>">
+            </div>
+            <h3><?= esc($card['title']) ?></h3>
+            <p><?= esc($card['desc']) ?></p>
         </div>
-        <h3>Cappuccino</h3>
-        <p>XXXXXXXXX</p>
-    </div>
-
-    <div class="card">
-        <div class="card-image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDpLx80GyTXGVcswRB9HHm-zHlvZqpq2xW-w&s" alt="Card 2 Image">
-        </div>
-        <h3>Iced Cafe Latte</h3>
-        <p>XXXXXXXXX.</p>
-    </div>
-
-    <div class="card">
-        <div class="card-image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPrr8LfAbOr9iobH8p2S1K3AtkDj2Ezxem9A&s" alt="Card 3 Image">
-        </div>
-        <h3>Iced Matcha Latte</h3>
-        <p>XXXXXXXXX.</p>
-    </div>
+    <?php endforeach; ?>
 </div>
+
+<style>
+    /* Keep your original CSS here (no change needed) */
+</style>
+
 
 <style>
     /* Container to center all cards */

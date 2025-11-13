@@ -58,23 +58,24 @@ $user = $session->get('user');
 
     <div class="nav-buttons">
         <?php if ($user): ?>
-
             <span class="welcome-text">
                 Welcome, <?= esc($user['display_name']) ?>!
             </span>
 
-            <!-- Logout Button (POST method recommended) -->
+            <!-- Logout Button -->
             <form action="/logout" method="post" class="logout-form">
                 <?= csrf_field() ?>
-                <?= view('components/buttons/primarybutton', ['label' => 'Logout']) ?>
+                <?= view('components/buttons/primarybutton', [
+                    'label' => 'Logout',
+                    'type' => 'submit',
+                ]) ?>
             </form>
 
-        <?php else: ?>
 
+        <?php else: ?>
             <?= view('components/buttons/primarybutton', ['label' => 'Get Started', 'href' => '/']) ?>
             <?= view('components/buttons/primarybutton', ['label' => 'Log In', 'href' => '/login']) ?>
             <?= view('components/buttons/primarybutton', ['label' => 'Sign up', 'href' => '/signup']) ?>
-
         <?php endif; ?>
     </div>
 </header>
